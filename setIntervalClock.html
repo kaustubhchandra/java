@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <script>
+        function getTime() {
+            var suf = "AM";
+            var sh = "";
+            var sm = "";
+            var ss = "";
+
+            var d = new Date();
+
+            var h = d.getHours();
+            if (h > 12) {
+                suf = "PM";
+                h -= 12;
+            }
+            if (h < 10)
+                sh = "0";
+
+            var m = d.getMinutes();
+            if (m < 10)
+                sm = "0";
+
+            var s = d.getSeconds();
+            if (s < 10)
+                ss = "0";
+
+            document.getElementById("time").innerText = sh + h + ":" + sm + m + ":" + ss + s + " " + suf;
+        }
+
+        setInterval(getTime, 1000);
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>The time is</h2>
+        <h1 id="time"></h1>
+    </center>
+</body>
+
+</html>

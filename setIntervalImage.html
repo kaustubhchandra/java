@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval Image</title>
+    <script>
+        var arr = ["casino.jpg", "roadside.jpg", "skates.jpg"];
+        var i = 0;
+        function chgPic() {
+            var img = document.querySelector("#img");
+            img.src = "../HTML/Assignment/SidharthJawale_6181_PHP/Graphics/Main/index/" + arr[i];
+            i++;
+            if (i == arr.length)
+                i = 0;
+        }
+        setInterval(chgPic, 3000);
+    </script>
+</head>
+
+<body>
+    <center>
+        <div id="banner">
+            <h3>This is a banner</h3>
+            <img src="" alt="Banner Image" id="img">
+        </div>
+    </center>
+</body>
+
+</html>

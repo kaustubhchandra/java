@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <script>
+        function addTask() {
+            var li = document.createElement("li");
+            li.textContent = document.getElementById("text").value;
+            document.getElementById("task").appendChild(li);
+            document.getElementById("text").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>To Do List</h3>
+    <label for="text">Task:</label>
+    <input type="text" name="text" id="text">
+    <button onclick="addTask()">Add</button>
+    <ul id="task"></ul>
+</body>
+
+</html>
