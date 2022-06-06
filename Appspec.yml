@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /webapp.war
+    destination: /opt/tomcat/webapps/
+
+hooks:
+  ApplicationStop:
+    - location: 
+  BeforeInstall:
+    - location: 
+      timeout: 
+      runas: 
+  AfterInstall:
+    - location: 
+      timeout: 
+      runas: 
+
+
