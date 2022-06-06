@@ -6,14 +6,14 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: 
+    - location: script/stop.sh
   BeforeInstall:
-    - location: 
-      timeout: 
-      runas: 
+    - location: script/status.sh
+      timeout: 300
+      runas: root
   AfterInstall:
-    - location: 
-      timeout: 
-      runas: 
+    - location: script/start.sh
+      timeout: 300
+      runas: root
 
 
